@@ -1,3 +1,2 @@
 Estudando sobre Git e github.
-
-Irei dar andamento em minha casa
+Modificando arquivo criado in work, in my house.
