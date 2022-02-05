@@ -1,15 +1,5 @@
-Estudando sobre Git e github.
+Estudando git e github na plataforma da devmedia.
 
-Modificando arquivo criado in work, in my house.
+Realizando os exercícios de testes para geração do certificado.
 
-Segunda alteração, testando git diff
-
-Testando quebra de linha do README.md
-
-Irei utilizar as funcionalidades do git revert
-
-Testando quebra de linha do README.md
-
-Agora lets go, no cry.
-
-Essa linha está sendo adicionada na branch stating para testar o merge
+Verificando o estado de um arquivo após modificação.
