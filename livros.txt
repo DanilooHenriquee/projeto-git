@@ -1,3 +1,15 @@
-Arsene lupan - o ladrão de casaca
+Kyle Simpson → You Don't Know JS - Scope & Closures.
 
-7 Hábitos
+Jon Duckett → JavaScript & JQuery.
+
+Edécio Fernando Iepsen → Lógica de Programação e Algoritmos com JavaScript.
+
+Anita Lopes e Guto Garcia → Introdução à programação: 500 algoritmos resolvidos.
+
+Michael Morrison → Use a Cabeça! JavaScript.
+
+Martin Robert C. → Clean Code.
+
+Loiane Groner → Estruturas de dados e algoritmos com JavaScript. 
+
+Nicholas C. Zakas → Princípios de Orientação a Objetos em JavaScript.
