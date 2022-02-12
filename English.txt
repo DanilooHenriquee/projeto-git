@@ -9,3 +9,8 @@ very well.
 what day is today ?
 what day was yesterday ?
 what day will be tomorrow ?
+
+do you want an orange ?
+do you want an apple ?
+do you want a coffe with milk ?
+are you from Brazil ?
