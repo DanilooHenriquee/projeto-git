@@ -1,11 +1,14 @@
-﻿Estudando git e github na plataforma da devmedia.
+﻿<h1>Estudando <strong>Git e Github</strong> na plataforma devmedia.</h1>
 
-Realizando os exercícios de testes para geração do certificado.
+<p> 
+	Realizando os exercícios para geração do certificado.
+</p>
+<p> 
+	Estudando Codeigniter Framework, PHP.
+</p>
+<p>
+	Configurando mais de um computador para utilizar o git e gitgub
+</p>
 
-Verificando o estado de um arquivo após modificação.
 
-Analisando a diferença do repositorio local e do remoto.
 
-Novo projeto, criar api e testar com insomnia
-
-teste

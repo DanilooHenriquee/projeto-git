@@ -1,3 +1,11 @@
+PHP:
+MVC
+POO
+API REST, RESTfull
+Framework Codeigniter 4
+
+
+Tecnologias e Linguagens:
 NodeJS
 ReactJS
 React Native
