@@ -5,3 +5,5 @@ Realizando os exercícios de testes para geração do certificado.
 Verificando o estado de um arquivo após modificação.
 
 Analisando a diferença do repositorio local e do remoto.
+
+Novo projeto, criar api e testar com insomnia
