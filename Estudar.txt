@@ -11,4 +11,11 @@ ReactJS
 React Native
 JavaScript
 TypeScript
+Postgres
+Oracle
+MongoDb
 :)
+
+Linux
+Clean Code
+Docker
