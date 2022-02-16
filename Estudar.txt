@@ -3,7 +3,7 @@ MVC
 POO
 API REST, RESTfull
 Framework Codeigniter 4
-
+Laravel
 
 Tecnologias e Linguagens:
 NodeJS
@@ -14,8 +14,10 @@ TypeScript
 Postgres
 Oracle
 MongoDb
-:)
 
 Linux
 Clean Code
 Docker
+
+Languages:
+English
