@@ -3,7 +3,7 @@ MVC
 POO
 API REST, RESTfull
 Framework Codeigniter 4
-Laravel
+Framework Laravel
 
 Tecnologias e Linguagens:
 NodeJS
