@@ -12,5 +12,8 @@
 <p>
 	estudando codeigniter4
 </p>
+<p>
+	estudando netfily para hospedar meus sites que irei fazer.
+</p>
 
 
