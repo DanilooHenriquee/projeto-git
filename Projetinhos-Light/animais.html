@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animais Fantásticos </title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+
+        body {
+            background-color: rgb(245, 178, 33);
+        }
+
+        header {
+            background-color: rgb(199, 199, 199);
+            height: 60px;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid black;
+        }
+
+        header#formulario {
+            height: 30px;
+            background-color: rgb(218, 218, 218);
+        }
+
+        input {
+            margin: 4px;
+        }
+
+        input#btMostrar {
+            margin-left: 10px;
+            padding: 4px;
+            background-color: rgb(255, 174, 0);
+            border: 1px solid rgb(158, 158, 158);
+            color: black;
+            cursor: pointer;
+        }
+
+        input#btMostrar:hover {
+            color: rgb(158, 158, 158);
+            background-color: rgb(255, 201, 83);
+            transition: .5s;
+        }
+
+        main {
+            background-color: rgb(255, 201, 83);
+            width: 80vw;
+            margin: auto;
+            height: 300px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        section {
+            background-color: rgb(255, 228, 138);
+            height: 280px;
+            width: 45%;
+
+        }
+
+        section h3#outAnimal {
+            text-align: center;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        section h3#outMenssagem {
+            text-align: center;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        section div {
+            width: 100%;
+            height: 100%;
+            display: flex;
+        }
+
+        section img {
+            width: 80%;
+            height: 80%;
+            margin: auto;
+            align-items: center;
+
+        }
+
+        footer {
+            width: 80vw;
+            margin: auto;
+        }
+
+        footer img {
+            width: 80vw;
+            margin: auto;
+        
+        }
+
+        
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <h2>Animais Fantásticos</h2>
+    </header>
+    <header id="formulario" >
+        <input type="radio" name="animais" id="inAranha" > Aranha
+        <input type="radio" name="animais" id="inEscorpiao" > Escorpião
+        <input type="radio" name="animais" id="inCobra" > Cobra
+        <input type="radio" name="animais" id="inLagarta" > Lagarta
+        <input type="button" id="btMostrar" value="Mostrar Animal">
+    </header>
+    <main>
+        <section id="secH3">
+            <h3 id="outAnimal"></h3>
+            <h3 id="outMenssagem"></h3>
+        </section>
+        <section>
+            <div>
+                <img src="https://i.pinimg.com/564x/8f/1c/3f/8f1c3fbc56ce1279c51879722c1cb87e.jpg" id="outImagem" alt="Animal">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <img src="https://i.ytimg.com/vi/Meu9L5fQGG8/maxresdefault.jpg" alt="Animais">
+    </footer>
+
+
+
+    <script>
+
+        var animais = new Array(4);
+        var imagensAnimais = new Array(4);
+        
+        animais[0] = "Cuidado, a picada de uma radioativa pode te transformar em um super-heroi.";
+        animais[1] = "Escorpião é o oitavo signo astrológico do zodíaco.";
+        animais[2] = "Cobra é a uma denominação genérica, utilizada frequentemente na língua portuguesa como sinônimo para Serpente.";
+        animais[3] = "Na linguagem vulgar, chama-se lagarta ao primeiro estágio larval dos insetos da ordem dos Lepidoptera.";
+
+        imagensAnimais[0] = "https://super.abril.com.br/wp-content/uploads/2018/04/aranha-constroi-balc3b5es-feitos-de-teia-e-sai-voando-com-eles.png?w=1024";
+        imagensAnimais[1] = "https://static1.purebreak.com.br/articles/7/19/82/7/@/100084-escorpianos-tem-tudo-a-ver-com-diapo-1.jpg";
+        imagensAnimais[2] = "https://www.megashopsul.com.br/3315-large_default/fantasia-infantil-ninja-cobra-festa-halloween-carnaval.jpg";
+        imagensAnimais[3] = "https://i.pinimg.com/originals/e8/8c/04/e88c04bf77b4840ac331557fb4a6a272.jpg";
+        
+        function mostrarAnimais() {
+            var inAranha = document.getElementById('inAranha').checked;
+            var inEscorpiao = document.getElementById('inEscorpiao').checked;
+            var inCobra = document.getElementById('inCobra').checked;
+            var inLagarta = document.getElementById('inLagarta').checked;
+            var outAnimal = document.getElementById('outAnimal');
+            var outMenssagem = document.getElementById('outMenssagem');
+            var outImagem = document.getElementById('outImagem');
+
+
+            var animaExibir;
+
+            if(inAranha === true) {
+                animalExibir = 0;
+            } else if (inEscorpiao === true) {
+                animalExibir = 1;
+            } else if (inCobra === true) {
+                animalExibir = 2;
+            } else if (inLagarta === true) {
+                animalExibir = 3;
+            } else {
+                alert("Selecione a opção desejada e clique no botão: Mostrar Animal.")
+            }
+
+            console.log(animalExibir);
+            var animal;
+            var menssagem;
+            var imagem;
+
+            switch(animalExibir){
+                case 0:
+                    animal = "Aranha";
+                    menssagem = animais[animalExibir];
+                    imagem = imagensAnimais[animalExibir];
+                    break;
+                case 1:
+                    animal = "Escorpião";
+                    menssagem = animais[animalExibir];
+                    imagem = imagensAnimais[animalExibir];
+                    break;
+                case 2:
+                    animal = "Cobra";
+                    menssagem = animais[animalExibir];
+                    imagem = imagensAnimais[animalExibir];
+                    break;
+                case 3:
+                    animal = "Lagarta";
+                    menssagem = animais[animalExibir];
+                    imagem = imagensAnimais[animalExibir];
+                    break;
+                default:
+                    menssagem = "Opção Invalida";
+                    break;
+            }
+
+            outAnimal.textContent = animal;
+            outMenssagem.textContent = menssagem;
+            outImagem.setAttribute('src', imagem);
+            
+            console.log(outImagem);
+            console.log(imagem);
+
+        }
+
+        var btMostrar = document.getElementById('btMostrar');
+        btMostrar.addEventListener('click', mostrarAnimais);
+
+    </script>
+
+
+</body>
+</html>

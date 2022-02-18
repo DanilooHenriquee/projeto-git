@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dividas</title>
+
+    <style>
+    
+        img {
+            width: 300px;
+            height: 100vh;
+            float: left;
+            margin-top: 40px;
+        }
+
+        pre {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #btCadastrar {
+            width: 250px;
+            background-color: rgb(253, 160, 171);
+            border-radius: 6px;
+            border: 1px solid black;
+        }
+
+        #btCadastrar:hover {
+            cursor: pointer;
+            background-color: pink;
+        }
+        
+
+    </style>
+
+</head>
+<body>
+
+    <img src="img/pork.jpg" alt="porquinho">
+    <div id="espacoBranco"></div>
+
+    <h1>Contas à Pagar.</h1>
+    <br>
+    <p> Descrição :
+        <input type="text" id="inDescricao">
+    </p>
+    <p> Valor R$ :
+        <input type="text" id="inValor">
+    </p>
+    <p>
+        <input type="button" id="btCadastrar" value="Cadastrar Conta">
+    </p>
+    <hr>
+    <p>
+        <h3 id="outTotal">
+        </h3>
+    </p>
+    <hr>
+    <p>
+        <h3 id="outContas"></h3>
+    </p>
+
+    <script>
+
+        var valorTotal = 0;
+        var numContas = 0;
+        var respostas = "";
+        var resultado = "";
+
+        function calcularContas() {
+            let inDescricao = document.getElementById('inDescricao');
+            let inValor = document.getElementById('inValor');
+            let outTotal = document.getElementById('outTotal');
+            let outContas = document.getElementById('outContas');
+
+            let descricao = inDescricao.value;
+            let valor = Number(inValor.value);
+
+            if(descricao == "") {
+                alert("Preencha a descrição !");
+                inDescricao.focus();
+                return;
+            }
+
+            if(valor == "" || valor =="0" || isNaN(valor)){
+                alert("Preencha um valor válido !");
+                inValor.focus();
+                return;
+            }
+
+        respostas = respostas + descricao + " R$: " + valor.toFixed(2) + "<br>";
+        valorTotal = valorTotal + valor;
+        numContas++;
+        resultado = numContas + " Conta(s), Valor à ser Pago: R$ " + valorTotal.toFixed(2); 
+
+        outTotal.innerHTML = respostas;
+        outContas.innerHTML = resultado;
+
+        inDescricao.value = "";
+        inValor.value="";
+
+        }
+
+        btCadastrar = document.getElementById('btCadastrar');
+        btCadastrar.addEventListener('click', calcularContas);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quem vai pagar a Conta ?</title>
+
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            height: 100vh;
+            width: 100vw;
+            background-color: bisque;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #main {
+            width: 400px;
+            background-color: burlywood;
+
+            border-radius: 0 50px;
+        }
+        
+        .btn {
+            background-color: chocolate;
+            border: none;
+            padding: 3px 5px;
+            border-radius: 0 8px;
+        }
+
+        .btn:hover {
+            background-color: rgb(185, 117, 67);
+            padding: 3px 5px;
+            cursor: pointer;
+
+            border: none;
+            border-radius: 8px 0;
+
+            transition: 1s;
+        }
+
+        .btn-btn {
+            width: 80%;
+            text-align: center;
+        }
+
+        div.alg-center {
+            display: flex;
+            justify-content: center;
+        }
+
+        div.mt-5 {
+            margin: 10px 0 30px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        form, div.mrg {
+            margin: 0 10%;
+        }
+        
+    </style>
+
+</head>
+<body>
+    <main id="main">
+        <h2>Quem Vai Pagar a Conta ?</h2>
+        <form action="javascript: receberNomes();">
+            <label for="nome">Nome: </label>
+            <input type="text" name="nome" id="nome">
+            <input type="submit" class="btn" value="Adicionar">
+        </form>
+        <div class="mrg">
+            <h3>Participantes: </h3>
+            <div id="participantes">
+
+            </div>
+        </div>
+        <div class="alg-center">
+            <button class="btn btn-btn" id="btn-list">Limpar Lista</button>
+        </div>
+        <div class="mrg">
+            <h3>O Felizardo foi: </h3>
+            <p id="sorteado">
+                
+            </p>
+        </div>
+        <div class="alg-center">
+            <button class="btn btn-btn" id="btn-sortear">Sortear Nome</button>
+        </div>
+        <div class="alg-center mt-5">
+            <button class="btn btn-btn" id="btn-reiniciar">Reiniciar</button>
+        </div>
+    </main>
+
+    <script>
+
+        var arrayNomes = [];
+        var numNomes = 1;
+        var numeroSorteado = "";
+
+        function receberNomes() {
+            let nome = document.getElementById("nome");
+            let participantes = document.getElementById("participantes");
+            nomeParticipantes = nome.value;
+        
+            participantes.innerHTML += "<p>" + nomeParticipantes + "</p>";
+            arrayNomes[numNomes] = nomeParticipantes;
+            numNomes++;
+
+            nome.value = "";
+        }
+
+        function limparLista() {
+            let participantes = document.getElementById("participantes");
+            participantes.textContent = "";
+        }
+
+        function sortearNome() {
+            let btnSorteado = document.getElementById("sorteado");
+            let numTotal = arrayNomes.length;
+            let numSortudo = Math.floor(Math.random() * (numTotal - 1)) +1; 
+
+			if (!arrayNomes[1] == "") {
+				btnSorteado.textContent = arrayNomes[numSortudo];
+			} else {
+				btnSorteado.textContent = "Não foi adicionado nenhum nome a lista.";
+			}
+            
+        }
+
+        function reiniciar() {
+            location.reload();
+        }
+
+        let btnList = document.getElementById("btn-list");
+            btnList.addEventListener("click", limparLista);
+
+        let btnSortear = document.getElementById("btn-sortear");
+            btnSortear.addEventListener("click", sortearNome);
+
+        let btnReiniciar = document.getElementById("btn-reiniciar");
+            btnReiniciar.addEventListener("click", reiniciar);
+
+        
+    </script>
+
+</body>
+</html>
