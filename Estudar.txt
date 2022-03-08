@@ -21,3 +21,10 @@ Docker
 
 Languages:
 English
+
+
+Cursos:
+DIO
+DevMedia
+Rocketseat
+Programador BR
